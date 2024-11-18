@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/estilo.css">
+    <title>Arduino Robotics Hub</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="/estilo.css">
+        <title>Arduino Robotics Hub</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="top-nav">
+                    <div class="logo">TechRoboLab</div>
+                    <div class="user-actions">
+                        <a href="#">Iniciar Sesión</a>
+                        <a href="#">Registrarse</a>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <div class="nav-links">
+                        <a href="#">Inicio</a>
+                        <a href="#">Proyectos</a>
+                        <a href="#">Tutoriales</a>
+                        <a href="#">Tienda</a>
+                        <a href="#">Galería</a>
+                        <a href="#">Acerca de Nosotros</a>
+                        <a href="#">Juega con arduino</a>
+                        <a href="#">Cursos en Línea</a>
+                    </div>
+                    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                </nav>
+            </div>
+        </header>
+       
+    
+        <div class="container">
+            <div class="main-content">
+                <div class="text-content">
+                    <h1>
+                        <span class="orange-text">CREA Y APRENDE</span><br>
+                        <span class="blue-text">Robótica con<br>Arduino</span>
+                    </h1>
+                    <p>
+                        Descubre el fascinante mundo de la robótica con Arduino. Desde principiantes hasta expertos, 
+                        encuentra proyectos emocionantes, tutoriales paso a paso y una comunidad apasionada lista 
+                        para ayudarte en tu viaje de creación tecnológica.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Comenzar Ahora →</button>
+                        <button class="cta-button secondary">Ver Proyectos</button>
+                    </div>
+                </div>
+    
+                <div class="robot-illustration">
+                    <div class="robot-card">
+                        <div class="robot-inner">
+                            <div class="robot-head">
+                                <div class="robot-eye"></div>
+                                <div class="robot-eye"></div>
+                            </div>
+                            <div class="robot-grid">
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                                <div class="robot-grid-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Proyectos Guiados</h3>
+                    <p>Aprende con proyectos paso a paso, desde robots seguidores de línea hasta brazos robóticos controlados por Arduino.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Biblioteca de Sensores</h3>
+                    <p>Explora nuestra extensa biblioteca de sensores y actuadores compatibles con Arduino para tus proyectos de robótica.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Comunidad Activa</h3>
+                    <p>Únete a una comunidad vibrante de entusiastas de la robótica. Comparte, aprende y colabora en proyectos emocionantes.</p>
+                </div>
+            </div>
+        </div>
+    <!--este es el codigo de los proyectos-->
+    <h1 class="main-title">
+        <span class="title-animation">Proyectos</span>
+        <span class="title-animation" style="animation-delay: 0.2s">Innovadores</span>
+        <span class="title-animation" style="animation-delay: 0.4s">de</span>
+        <span class="title-animation" style="animation-delay: 0.6s">Robótica</span>
+    </h1>
+    
+    <div class="projects-container">
+        <!-- Proyecto 1 -->
+        <div class="project-card" data-aos="fade-up" onclick="openModal('robot1')">
+            <span class="project-tag">Básico</span>
+            <img src="https://th.bing.com/th/id/R.f1da5215ff09a39999ce96daceb53a31?rik=HuFD%2fz%2bzV49dVQ&riu=http%3a%2f%2falabenle.net%2ftecbolivia%2fimages%2fstories%2fvirtuemart%2fproduct%2fkit-carro-robot-seguidor-de-l%c3%adnea-sl-1.jpg&ehk=glQp6L7w2Aqctus3o7KpEue2fc4XCXHJg6crJ6q9H4I%3d&risl=&pid=ImgRaw&r=0" alt="Robot Seguidor de Línea" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Robot Seguidor de Línea</h3>
+                <p class="project-description">Robot autónomo que utiliza sensores infrarrojos para seguir trayectorias marcadas.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('robot2')">
+            <span class="project-tag">Intermedio</span>
+            <img src="/api/placeholder/300/200" alt="Brazo Robótico" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Brazo Robótico</h3>
+                <p class="project-description">Brazo robótico con 4 grados de libertad controlado por Arduino.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('robot3')">
+            <span class="project-tag">Avanzado</span>
+            <img src="/api/placeholder/300/200" alt="Drone Autónomo" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Drone Autónomo</h3>
+                <p class="project-description">Drone programable con capacidad de vuelo autónomo y evasión de obstáculos.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 4 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300" onclick="openModal('robot4')">
+            <span class="project-tag">Intermedio</span>
+            <img src="/api/placeholder/300/200" alt="Robot Explorador" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Robot Explorador</h3>
+                <p class="project-description">Robot móvil con cámara y sensores para exploración remota.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 5 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400" onclick="openModal('robot5')">
+            <span class="project-tag">Básico</span>
+            <img src="/api/placeholder/300/200" alt="Smart Garden" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Smart Garden</h3>
+                <p class="project-description">Sistema automatizado de riego y monitoreo para plantas.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 6 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500" onclick="openModal('robot6')">
+            <span class="project-tag">Avanzado</span>
+            <img src="/api/placeholder/300/200" alt="Robot Humanoide" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Robot Humanoide</h3>
+                <p class="project-description">Robot bípedo con capacidad de movimiento articulado.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 7 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="600" onclick="openModal('robot7')">
+            <span class="project-tag">Intermedio</span>
+            <img src="/api/placeholder/300/200" alt="Sistema Domótico" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Sistema Domótico</h3>
+                <p class="project-description">Control automatizado de iluminación y temperatura para hogares.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 8 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="700" onclick="openModal('robot8')">
+            <span class="project-tag">Básico</span>
+            <img src="/api/placeholder/300/200" alt="Piano Robot" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Piano Robot</h3>
+                <p class="project-description">Sistema automatizado para tocar melodías en un piano.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 9 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="800" onclick="openModal('robot9')">
+            <span class="project-tag">Avanzado</span>
+            <img src="/api/placeholder/300/200" alt="Robot Dibujante" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Robot Dibujante</h3>
+                <p class="project-description">Brazo robótico capaz de realizar dibujos y escritura.</p>
+            </div>
+        </div>
+    
+        <!-- Proyecto 10 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="900" onclick="openModal('robot10')">
+            <span class="project-tag">Intermedio</span>
+            <img src="/api/placeholder/300/200" alt="Clasificador de Objetos" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Clasificador de Objetos</h3>
+                <p class="project-description">Sistema de visión artificial para clasificar objetos por color y tamaño.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Título del Proyecto</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="changeTab('description')">Descripción</button>
+                <button class="tab" onclick="changeTab('components')">Componentes</button>
+                <button class="tab" onclick="changeTab('diagram')">Diagrama</button>
+                <button class="tab" onclick="changeTab('code')">Código</button>
+                <button class="tab" onclick="changeTab('circuit')">Circuito</button>
+                <button class="tab" onclick="changeTab('gallery')">Galería</button>
+            </div>
+    
+            <div id="description" class="tab-content active">
+                <h3>Descripción Detallada</h3>
+                <p>Contenido detallado del proyecto...</p>
+            </div>
+    
+            <div id="components" class="tab-content">
+                <h3>Lista de Componentes</h3>
+                <ul id="componentsList">
+                    <li>Arduino UNO</li>
+                    <li>Sensores específicos</li>
+                    <li>Actuadores</li>
+                    <li>Componentes estructurales</li>
+                </ul>
+            </div>
+    
+            <div id="diagram" class="tab-content">
+                <h3>Diagrama del Proyecto</h3>
+                <img src="/api/placeholder/800/400" alt="Diagrama del proyecto" style="width: 100%; max-width: 800px;">
+            </div>
+    
+            <div id="code" class="tab-content">
+                <h3>Código del Proyecto</h3>
+                <code>
+    // Ejemplo de código base
+    #include <Arduino.h>
+    
+    void setup() {
+    Serial.begin(9600);
+    pinMode(LED_BUILTIN, OUTPUT);
+    // Configuración inicial
+    }
+    
+    void loop() {
+    // Lógica principal
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(1000);
+    }
+                </code>
+            </div>
+    
+            <div id="circuit" class="tab-content">
+                <h3>Circuito del Proyecto</h3>
+                <img src="/api/placeholder/800/400" alt="Circuito del proyecto" style="width: 100%; max-width: 800px;">
+            </div>
+    
+            <div id="gallery" class="tab-content">
+                <h3>Galería de Imágenes</h3>
+                <div class="gallery-grid">
+                    <img src="/api/placeholder/400/300" alt="Imagen 1">
+                    <img src="/api/placeholder/400/300" alt="Imagen 2">
+                    <img src="/api/placeholder/400/300" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--este es el apartado del desarrollador-->
+    <div class="container">
+        <section class="developer-section">
+            <div class="developer-image">
+                <img src="/IMG/144668157_173617967624681_6138841446650906224_n.jpg" alt="Developer Profile">
+            </div>
+            <div class="developer-info">
+                <h2>Nombre del Desarrollador</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+       
+        <section class="skills-section">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="progress-circle">
+                        <svg>
+                            <circle cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <span class="progress-text">90%</span>
+                    </div>
+                    <h3 style="text-align: center; margin-top: 15px;">HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="progress-circle">
+                        <svg>
+                            <circle cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <span class="progress-text">85%</span>
+                    </div>
+                    <h3 style="text-align: center; margin-top: 15px;">CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="progress-circle">
+                        <svg>
+                            <circle cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <span class="progress-text">80%</span>
+                    </div>
+                    <h3 style="text-align: center; margin-top: 15px;">JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="progress-circle">
+                        <svg>
+                            <circle cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <span class="progress-text">75%</span>
+                    </div>
+                    <h3 style="text-align: center; margin-top: 15px;">Python</h3>
+                </div>
+            </div>
+        </section>
+    
+        <section class="social-section">
+            <div class="social-links">
+                <a href="#" class="social-button">GitHub</a>
+                <a href="#" class="social-button">LinkedIn</a>
+                <a href="#" class="social-button">Twitter</a>
+                <a href="#" class="social-button">Instagram</a>
+            </div>
+        </section>
+    </div>
+
+    <!--apartado de donacion-->
+    <div class="donation-container">
+        <div class="coffee-section">
+            <div class="coffee-icon">☕</div>
+            <div class="description">
+                <h2>¡Invítame un cafecito!</h2>
+                <p>Tu apoyo me ayuda a seguir creando contenido y desarrollando proyectos increíbles. 
+                   Cada donación, sin importar el monto, hace la diferencia.</p>
+            </div>
+        </div>
+        <button class="donate-button" onclick="openModal()">Donar Ahora</button>
+    </div>
+
+    <div class="modal" id="donationModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Realizar Donación</h2>
+            <form class="payment-form" onsubmit="handleSubmit(event)">
+                <div class="input-group">
+                    <label>Selecciona una cantidad</label>
+                    <div class="amount-options">
+                        <div class="amount-option" data-amount="5">$5</div>
+                        <div class="amount-option" data-amount="10">$10</div>
+                        <div class="amount-option" data-amount="20">$20</div>
+                        <div class="amount-option" data-amount="50">$50</div>
+                        <div class="amount-option" data-amount="custom">Otra cantidad</div>
+                    </div>
+                    <div class="custom-amount">
+                        <input type="number" id="customAmountInput" placeholder="Ingresa la cantidad deseada" min="1" step="1">
+                    </div>
+                </div>
+                
+                <div class="payment-options">
+                    <div class="payment-option" onclick="selectPayment('paypal')">
+                        PayPal
+                    </div>
+                    <div class="payment-option" onclick="selectPayment('card')">
+                        Tarjeta
+                    </div>
+                </div>
+
+                <div id="paymentFields"></div>
+                
+                <button type="submit" class="donate-button">Procesar Donación</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="thank-you-modal" id="thankYouModal">
+        <!-- ... (modal de agradecimiento permanece igual) ... -->
+    </div>
+    
+    <!--this is the footer-->
+<footer class="arh-robotic-footer">
+    <div class="arh-circuit-background"></div>
+
+    <div class="arh-floating-gear arh-gear-1"></div>
+    <div class="arh-floating-gear arh-gear-2"></div>
+    <div class="arh-floating-gear arh-gear-3"></div>
+
+    <div class="arh-robotic-arm-container">
+        <div class="arh-robotic-arm">
+            <div class="arh-arm-base"></div>
+            <div class="arh-arm-segment">
+                <div class="arh-arm-joint"></div>
+                <div class="arh-arm-end">
+                    <div class="arh-claw arh-claw-left"></div>
+                    <div class="arh-claw arh-claw-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="arh-footer-content">
+        <div class="arh-footer-section">
+            <h3>About Us</h3>
+            <p>We are a community passionate about robotics and Arduino technology, dedicated to sharing knowledge and fostering innovation.</p>
+            <div class="arh-social-icons">
+                <div class="arh-social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="arh-social-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="arh-social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="arh-social-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="arh-footer-section">
+            <h3>Quick Links</h3>
+            <ul class="arh-footer-links">
+                <li><a href="#">Featured Projects</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+        </div>
+
+        <div class="arh-footer-section">
+            <h3>Contact</h3>
+            <div class="arh-contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Technology Street, Robotics City</p>
+            </div>
+            <div class="arh-contact-info">
+                <i class="fas fa-phone"></i>
+                <p>+1 234 567 890</p>
+            </div>
+            <div class="arh-contact-info">
+                <i class="fas fa-envelope"></i>
+                <p>info@arduinorobotics.com</p>
+            </div>
+        </div>
+
+        <div class="arh-footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to receive the latest news and updates.</p>
+            <form class="arh-newsletter-form">
+                <input type="email" class="arh-newsletter-input" placeholder="Your email">
+                <button type="submit" class="arh-newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="arh-footer-bottom">
+        <p>&copy; 2024 Arduino Robotics Hub. All rights reserved.</p>
+    </div>
+</footer>
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="/movie.js"></script>
+</body>
+</html>
